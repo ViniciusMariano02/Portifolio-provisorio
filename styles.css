@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+}
+
+header {
+    padding: 10px 0;
+    background: #fff;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 70px; 
+    width: auto;
+}
+
+/* Navegação */
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+#theme-toggle {
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 20px; /* Espaço entre o botão de alternância e os botões de navegação */
+}
+
+#sun-icon, #moon-icon {
+    font-size: 20px; /* Tamanho dos ícones */
+    margin: 0 5px;
+}
+
+#sun-icon {
+    display: block;
+}
+
+#moon-icon {
+    display: none;
+}
+
+body.dark-mode #sun-icon {
+    display: none; /* Esconder ícone do sol no modo escuro */
+}
+
+body.dark-mode #moon-icon {
+    display: block; /* Mostrar ícone da lua no modo escuro */
+}
+
+body.dark-mode #theme-toggle {
+    background: #333;
+    color: #ddd;
+}
+
+body.dark-mode #theme-toggle:hover {
+    background: #444;
+}
+
+/* Estilos dos botões de navegação */
+.nav-button {
+    background: none;
+    color: #333;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 10px;
+}
+
+.nav-button:hover {
+    background: #ddd;
+    color: #333;
+}
+
+/* Seção de Início */
+.hero-section {
+    height: 100vh;
+    background: url('images/digitar.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    transition: filter 0.3s;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente para melhorar a legibilidade do texto */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+}
+
+/* Seção Sobre */
+.about-section {
+    padding: 50px 20px;
+    background: #f0f0f0;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 150px;
+}
+
+.skill-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Seção Projetos */
+.projects-section {
+    padding: 50px 20px;
+    background: #f0f0f0;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Espaço entre os retângulos */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px; /* Limite máximo de largura */
+}
+
+.project-item img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.project-text {
+    padding: 20px;
+    flex: 1;
+}
+
+.project-text h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.project-text p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Modo escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode .hero-section {
+    filter: brightness(0.6) contrast(1.2); /* Menos brilho e mais contraste no modo escuro */
+}
+
+body.dark-mode .about-section {
+    background: #333;
+}
+
+body.dark-mode .about-content {
+    color: #ddd;
+}
+
+body.dark-mode .about-content p {
+    color: #ccc;
+}
+
+body.dark-mode .skill-item p {
+    color: #ccc;
+}
+
+body.dark-mode .skill-item img {
+    filter: brightness(0.9); /* Escurece as imagens no modo escuro */
+}
+
+body.dark-mode .projects-section {
+    background: #333;
+}
+
+body.dark-mode .project-item {
+    background: #444;
+    border: 1px solid #555;
+}
+
+body.dark-mode .project-text h3 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .project-text p {
+    color: #ccc;
+}
+
+/* Modo claro */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body.light-mode header {
+    background: #fff;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+body.light-mode .hero-section {
+    filter: brightness(1.2) contrast(1); /* Mais brilho e contraste normal no modo claro */
+}
+
+body.light-mode .about-section {
+    background: #f0f0f0;
+}
+
+body.light-mode .about-content {
+    color: #333;
+}
+
+body.light-mode .about-content p {
+    color: #333;
+}
+
+body.light-mode .skill-item p {
+    color: #333;
+}
+
+body.light-mode .skill-item img {
+    filter: none; /* Imagens normais no modo claro */
+}
+
+body.light-mode .projects-section {
+    background: #f0f0f0;
+}
+
+body.light-mode .project-item {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+body.light-mode .project-text h3 {
+    color: #333;
+}
+
+body.light-mode .project-text p {
+    color: #666;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-item {
+        max-width: 120px;
+    }
+}
